@@ -1,0 +1,156 @@
+:root {
+    /* COLORS */
+    --sedan-background: hsl(31, 77%, 52%);
+    --suv-background: hsl(184, 100%, 22%);
+    --luxury-background: hsl(179, 100%, 13%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --heading-buttons: hsl(0, 0%, 95%);
+
+    /* FONT */
+    --standard-size: 15px;
+    --body-font: 'Lexend Deca', sans-serif;
+    --heading-font: 'Big Shoulders Display', cursive;
+    --standard-weight: 400;
+    --bold-weight: 700;
+
+    --standard-padding: 1rem;
+}
+
+/* STYLES RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+/* UTILITIES */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 0 3rem 3rem;
+    row-gap: 2rem;
+}
+
+.heading-style {
+    font-family: var(--heading-font);
+    font-weight: var(--bold-weight);
+    color: var(--heading-buttons);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.paragraph-style {
+    font-size: var(--standard-size);
+    color: var(--paragraph-color);
+    width: 75%;
+}
+
+.button-style {
+    background-color: var(--heading-buttons);
+    border-radius: 25px;
+    padding: 0.5rem 1.6rem;
+    border: none;
+}
+
+/* GENERAL STYLES */
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--heading-buttons);
+    font-family: var(--body-font);
+    font-size: var(--standard-size);
+    font-weight: var(--standard-weight);
+}
+
+main {
+    padding: 1rem;
+}
+
+/* CLASS STYLES  */
+.sedan-section {
+    background-color: var(--sedan-background);
+}
+
+.sedan-section button {
+    color: var(--sedan-background);
+}
+
+.suv-section {
+    background-color: var(--suv-background);
+}
+
+.luxury-section {
+    background-color: var(--luxury-background);
+}
