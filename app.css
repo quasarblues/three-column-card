@@ -98,8 +98,8 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 3rem 0 3rem 3rem;
-    row-gap: 1.6rem;
+    padding: 2.5rem;
+    line-height: 1.4rem;
 }
 
 .heading-style {
@@ -108,12 +108,15 @@ h6 {
     color: var(--heading-buttons);
     font-size: 1.6rem;
     text-transform: uppercase;
+    margin-top: 2rem;
 }
 
 .paragraph-style {
     font-size: var(--standard-size);
     color: var(--paragraph-color);
-    width: 75%;
+    margin-top: 2rem;
+    display: inline-block;
+    width: 95%;
 }
 
 .button-style {
@@ -123,6 +126,7 @@ h6 {
     border: 2px solid var(--heading-buttons);
     box-sizing: border-box;
     transition: all 0.3s ease;
+    margin-top: 3rem;
 }
 
 /* GENERAL STYLES */
@@ -138,6 +142,17 @@ body {
 
 main {
     padding: 1rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-areas:
+        'sedan'
+        'suv'
+        'luxury';
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 /* SEDAN STYLES  */
@@ -180,4 +195,17 @@ main {
 .luxury-section button:hover {
     color: var(--heading-buttons);
     background-color: var(--luxury-background);
+}
+
+@media (min-width: 50em) {
+    .project-container {
+        grid-template-areas:
+            'sedan suv luxury'
+            'sedan suv luxury'
+            'sedan suv luxury'
+    }
+
+    .button-style {
+        margin-top: 5rem;
+    }
 }
